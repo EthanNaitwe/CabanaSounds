@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for Cabana website */
+  --deep-black: hsl(0, 0%, 10.2%);
+  --gold-accent: hsl(40, 47.1%, 61.4%);
+  --light-grey: hsl(0, 0%, 97.3%);
+  --charcoal: hsl(0, 0%, 20%);
+  --silver: hsl(0, 0%, 89.8%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-deep-black {
+    color: var(--deep-black);
+  }
+  
+  .bg-deep-black {
+    background-color: var(--deep-black);
+  }
+  
+  .text-gold-accent {
+    color: var(--gold-accent);
+  }
+  
+  .bg-gold-accent {
+    background-color: var(--gold-accent);
+  }
+  
+  .text-light-grey {
+    color: var(--light-grey);
+  }
+  
+  .bg-light-grey {
+    background-color: var(--light-grey);
+  }
+  
+  .text-charcoal {
+    color: var(--charcoal);
+  }
+  
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+  
+  .text-silver {
+    color: var(--silver);
+  }
+  
+  .bg-silver {
+    background-color: var(--silver);
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.5));
+  }
+}
