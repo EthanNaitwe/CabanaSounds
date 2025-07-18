@@ -35,7 +35,7 @@ const galleryImages = [
 
 export default function GallerySection() {
   return (
-    <section id="gallery" className="py-32 bg-deep-black">
+    <section id="gallery" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,10 +43,10 @@ export default function GallerySection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="font-playfair font-bold text-5xl md:text-6xl text-white mb-6">
+          <h2 className="font-playfair font-bold text-5xl md:text-6xl text-deep-black mb-6">
             Gallery
           </h2>
-          <p className="font-inter text-xl text-silver max-w-2xl mx-auto">
+          <p className="font-inter text-xl text-charcoal max-w-2xl mx-auto">
             Behind the scenes moments and professional photography
           </p>
         </motion.div>
@@ -58,12 +58,12 @@ export default function GallerySection() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="aspect-square overflow-hidden group cursor-pointer"
+              className="aspect-square overflow-hidden group cursor-pointer rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={image.imageUrl}
                 alt={image.title}
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 rounded-2xl"
               />
             </motion.div>
           ))}
